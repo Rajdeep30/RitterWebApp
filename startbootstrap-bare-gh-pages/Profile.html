@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Profile Name</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="icon" href="Titleicon.png" type="image/x-icon">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+    .liked{
+        background-color: aquamarine;
+    }
+
+    .itemcolor {
+      color: darkblue !important;
+      font-size: 32px;
+    }
+
+    .border{
+      border: 4px; border-color: black; border-style: double; height: 200px; border-radius: 12px;
+    }
+
+
+    a:hover {
+      background-color: chocolate;
+
+    }
+
+    .center {
+      margin: auto;
+      width: fit-content;
+      border: 3px solid #73AD21;
+      padding: 10px;
+    }
+
+    .fstyle {
+      border-radius: 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container" style="background-color: lightblue;">
+      <img src="logo.png" style="width: 15%; height: 20%;">
+      <a class="navbar-brand itemcolor" href="#">Ritter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link itemcolor" href="#">Home |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link itemcolor" href="#">Profile |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link itemcolor" href="#">Settings |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link itemcolor" href="#">Log out</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--User Info-->
+  <div class="container">
+ 
+    <div class="row" style="margin-top: 12px;">
+      <div class="col-md-3 col-sm-6" style="border: 2px; border-style: double; height: 200px; border-radius: 12px;">
+        <img class="img-responsive center-block" style="display: block; margin: auto; height: 128px; margin-top: 28px;"
+          src="profile.png" style="height: 128px; width: 128px;">
+      </div>
+      <div class="col-md-9 col-sm-6">
+       
+        <!--input type="text" style="height: 64px; width: 100%;" placeholder="Hello User!!Show Your writing skills"-->
+        <textarea id="myrittes_html" name="w3review"
+          style="border: outset 2px rgb(129, 129, 209); width: 100%; border-radius: 12px; height: 100%; font-size: 28px; text-align: center;"
+          rows="4" cols="50"
+          placeholder="Hello User!!&#10; Show your writing skills.....&#10; ধুনিয়া কথা বোৰ ||"></textarea>
+          <button class="btn-primary float-right" onclick="submit_rittes()" > POST</button>
+      </div>
+    </div>
+
+ 
+  </div>
+  <!--Fwiits-->
+
+  <div class="container">
+    <div class="row" style="margin-top: 15px; margin-left: 15px;" style="border: 2px; border-color: black; border-style: double; height: 150px; border-radius: 12px;">
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <img class="border" src="profile.png" style="height: 100px; width: 100px; display: block; margin: auto;">
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <p style="border: 2px; border-style: groove; height: 150px; border-radius: 10px; text-align: center;"> Your rittes
+          here</p>
+      </div>
+      <div class="col-md-1 col-sm-2 col-xs-2" id="liked_div">
+        <a id="Like" href="#"><img src="logo.png" style="border: 2px; border-style: double; height: 80px; border-radius: 12px; width: 80px;"></a>
+      </div>
+      <div class="col-md-1 col-sm-2 col-xs-2">
+        <a id="Dislike" href="#"><img src="logo.png" style="border: 2px; border-style: double; height: 80px; border-radius: 12px; width: 80px;"></a>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
+        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+        <ul class="list-unstyled">
+          <li>Bootstrap 4.5.0</li>
+          <li>jQuery 3.5.1</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    var x=documment.getElementById('liked_div');
+   
+  
+    x.addEventListener('click', function(){
+      //alert('You have liked the fwiit');
+      
+    });
+    document.getElementById('Dislike').addEventListener('click', function(){
+      alert('You have disliked the fwiit');
+    });
+  </script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-storage.js"></script>
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBCtgqf5Ke0w3Q1i4E4hI1j_9eHRpMAjgw",
+    authDomain: "ritter-e58f4.firebaseapp.com",
+    databaseURL: "https://ritter-e58f4.firebaseio.com",
+    projectId: "ritter-e58f4",
+    storageBucket: "ritter-e58f4.appspot.com",
+    messagingSenderId: "99299677275",
+    appId: "1:99299677275:web:d4b9a5956ff22e1ddd1b7e",
+    
+    measurementId: "G-SZ1FJ98LMQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="functiosn.js"></script>
+
+</body>
+
+</html>
